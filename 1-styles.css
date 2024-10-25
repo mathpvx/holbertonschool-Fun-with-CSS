@@ -1,0 +1,29 @@
+/* 1-styles.css */
+
+body,
+h2,
+a {
+	margin: 0;
+	padding: 0;
+}
+
+h2 a {
+	text-decoration: none;
+	color: rgb(196, 18, 18);
+	position: relative;
+}
+
+h2 a::after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	height: 3px;
+	width: 0;
+	left: 0;
+	background-color: rgb(196, 18, 18);
+	transition: width 0.3s ease;
+}
+
+h2 a:hover::after {
+	width: 100%;
+}
