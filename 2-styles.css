@@ -1,0 +1,64 @@
+/* 2-styles.css */
+
+body {
+	background-color: #eeee;
+}
+
+.toggle {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.toggle-label {
+	background-color: whitesmoke;
+	width: 350px;
+	height: 90px;
+	border-radius: 200px;
+	cursor: pointer;
+	position: relative;
+	transition: 0.2s;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.toggle-label::before {
+	position: absolute;
+	content: "";
+	background-color: white;
+	width: 110px;
+	height: 110px;
+	border-radius: 200px;
+	transition: 0.2s;
+}
+
+input:checked+.toggle-label {
+	background-color: rgb(196, 18, 18);
+}
+
+input:checked+.toggle-label::before {
+	transform: translateX(245px);
+}
+
+input {
+	display: none;
+}
+
+.toggle-label::after {
+	content: "No";
+	margin-right: 9rem;
+	color: grey;
+	font-weight: bold;
+	font-size: 3rem;
+}
+
+input:checked+.toggle-label::after {
+	content: "Yes";
+	margin-right: 9rem;
+	color: white;
+	font-weight: bold;
+	font-size: 3rem;
+}
